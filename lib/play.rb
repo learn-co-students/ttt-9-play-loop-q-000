@@ -31,3 +31,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  steps = 9
+  until steps == 0
+    turn(board)
+    steps -= 1
+  end
+end
