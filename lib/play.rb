@@ -12,6 +12,7 @@ def move(board, location, current_player = "X")
 end
 
 def position_taken?(board, location)
+
   board[location] != " " && board[location] != ""
 end
 
@@ -28,6 +29,14 @@ def turn(board)
     turn(board)
   end
   display_board(board)
+end
+
+def play(board)
+  board = 0
+  while board < 9
+    turn(board)
+    board += 1
+  end
 end
 
 # Define your play method below
