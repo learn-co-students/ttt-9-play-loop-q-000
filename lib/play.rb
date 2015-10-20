@@ -8,7 +8,7 @@ def display_board(board)
 end
 
 def move(board, location, current_player = "X")
-  board[location.to_i-1] = current_player
+  board[location.to_i - 1] = current_player
 end
 
 def position_taken?(board, location)
@@ -31,3 +31,32 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  counter = 0
+  until counter == 9
+    turn(board)
+    counter += 1
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
