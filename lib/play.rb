@@ -34,6 +34,6 @@ end
 def play(board)
   play_turn = 0
   until play_turn == 9
-  turn(board)
+    turn(board)
   end
 end
