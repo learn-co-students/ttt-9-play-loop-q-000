@@ -16,8 +16,14 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, position)
-  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
+  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1) 
 end
+
+=begin
+def board_open?(board)
+  board.any? {|x| x == " "}
+end
+=end
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -31,3 +37,7 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  9.times do turn(board)
+  end
+end
