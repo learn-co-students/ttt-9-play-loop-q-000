@@ -1,3 +1,4 @@
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -31,3 +32,9 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  while counter < 9
+    turn(board)
+  end
+end
