@@ -31,3 +31,11 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  winner = false
+  turn_number = 0
+  until winner || turn_number > 9
+    turn_number += 1
+    turn(board)
+  end
+end
