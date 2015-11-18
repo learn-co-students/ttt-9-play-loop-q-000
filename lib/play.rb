@@ -30,4 +30,9 @@ def turn(board)
   display_board(board)
 end
 
-# Define your play method below
+# Define your play method belowlear
+def play(board)
+  9.times do
+    turn(board)
+  end
+end
