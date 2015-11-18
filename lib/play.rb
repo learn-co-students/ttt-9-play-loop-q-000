@@ -20,18 +20,22 @@ def valid_move?(board, position)
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
+     puts "Please enter 1-9:"
+     input = gets.strip
   if valid_move?(board, input)
-    move(board, input)
+     move(board, input)
   else
-    turn(board)
+     turn(board)
   end
-  display_board(board)
+     display_board(board)
 end
 
 # Define your play method below
 def play(board)
-  until turn(board) == 9
+    turn_count = 0
+until turn_count == 9
+    turn(board)
+    turn_count += 1
 end
 end
+
