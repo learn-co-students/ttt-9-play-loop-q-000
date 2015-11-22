@@ -24,10 +24,17 @@ def turn(board)
   input = gets.strip
   if valid_move?(board, input)
     move(board, input)
+    display_board(board) #placing the display_board function here will prevernt multiple printings of the board from recursion.
   else
     turn(board)
   end
-  display_board(board)
 end
 
 # Define your play method below
+def play(board)
+  count = 0
+  until count == 9
+    turn(board)
+    count +=1
+  end
+end
