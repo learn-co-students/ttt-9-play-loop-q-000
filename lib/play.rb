@@ -31,3 +31,23 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+
+  counter = 0 # Start our counter at 0, we have never run the loop
+loop do # Start our loop
+  # increment our counter by 1 and set it equal to the sum of it's current value, plus 1.
+  counter = counter + 1
+
+  # Do Something
+  turn(board)
+
+  if counter >= 9 # If our counter is 10 or more
+    break # Stop the loop
+  end
+end
+
+
+
+
+end
