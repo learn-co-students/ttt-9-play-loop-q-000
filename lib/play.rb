@@ -31,3 +31,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turns = 0
+    9.times do
+    turn(board)
+  end
+  puts" Thanks for playing!"
+end
