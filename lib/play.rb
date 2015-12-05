@@ -31,10 +31,11 @@ def turn(board)
 end
 
 def play(board)
-loop do turn
-  turn = turn + 1
-  if turn > 9
-  break
-end
-end
+  counter = 0
+    loop do turn(board)
+      coutner = counter + 1
+    if counter > 9
+      break
+    end
+  end
 end
