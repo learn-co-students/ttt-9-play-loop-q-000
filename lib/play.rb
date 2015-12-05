@@ -31,3 +31,17 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  players_turn = 0
+until players_turn == 9
+     turn(board)
+     players_turn += 1
+  end
+  puts "This game is over!"
+end
+
+
+
+
+
+
