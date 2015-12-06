@@ -39,13 +39,3 @@ def play(board)
      turn(board)
   end
 end
-
-#def play(board)
-#  moves_left = 0
-
-#  while moves_left < 9
-#    moves_left += 1
-#    turn(board)
-#  end
-
-#end
