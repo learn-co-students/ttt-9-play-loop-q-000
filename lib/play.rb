@@ -6,6 +6,9 @@ def play(board)
   end
 end
 
+def turn_count
+
+end
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
