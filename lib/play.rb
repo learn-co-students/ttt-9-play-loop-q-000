@@ -1,10 +1,10 @@
 # Helper Methods
 def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]} "
-  puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+	puts " #{board[0]} | #{board[1]} | #{board[2]} "
+	puts "-----------"
+	puts " #{board[3]} | #{board[4]} | #{board[5]} "
+	puts "-----------"
+	puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def move(board, location, current_player = "X")
@@ -31,3 +31,14 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board) 
+	count = 0
+	loop do
+		count += 1
+		turn(board)
+		if count == 9
+			break
+		end
+	end
+end
