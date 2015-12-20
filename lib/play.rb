@@ -31,3 +31,19 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  9.times do
+    turn(board)
+  end
+end
+
+def gameover?(board)
+  board.each do |slot|
+    if !(slot=="X"||slot=="O")
+      return false
+    else
+      return true
+    end
+  end
+end
+
