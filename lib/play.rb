@@ -13,11 +13,13 @@ end
 
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
+  puts "That square is taken. Choose again."
 end
 
 def valid_move?(board, position)
   position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
+
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -31,3 +33,12 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  rounds = 0
+  while 
+    rounds <= 9
+    puts "Your move"
+    turn(board)
+    rounds += 1
+  end
+end
