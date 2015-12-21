@@ -37,3 +37,22 @@ playcount = 0
     playcount += 1
   end
 end
+
+def turn_count2(board)
+  count = 0
+  board.each do |count|
+    board.each != "X" || board.each != "O"
+      count += 1
+    end
+  end
+
+def turn_count(board)
+  board.to_s.select do |count|
+    count != " "
+    return count.length
+end
+
+def current_player(board)
+
+end
+
