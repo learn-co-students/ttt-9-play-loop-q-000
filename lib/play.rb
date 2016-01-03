@@ -1,4 +1,3 @@
-require 'pry'
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -35,7 +34,6 @@ end
 def play(board)
   turn_counter = 0
   while turn_counter < board.length
-    binding.pry
     turn(board)
     turn_counter += 1
   end
