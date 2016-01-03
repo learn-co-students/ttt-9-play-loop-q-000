@@ -1,10 +1,11 @@
+require 'pry'
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} \n"
 end
 
 def move(board, location, current_player = "X")
@@ -31,3 +32,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turn_counter = 0
+  while turn_counter < board.length
+    turn(board)
+    turn_counter += 1
+  end
+end
