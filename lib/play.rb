@@ -31,3 +31,12 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turns = 0
+  #start a loop and call #turn
+  while turns < 9
+    turn(board)
+    turns += 1
+  end
+  #brak the loop after 9 turns!
+end
