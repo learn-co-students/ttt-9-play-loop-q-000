@@ -1,4 +1,23 @@
 # Helper Methods
+
+def turn_count(board)
+  count=0
+  board.each do |position|
+    if(|position|=="X"|||position|=="O")
+      count+=1
+    end
+  end
+    return count
+end
+
+def current_player(count)
+  if(count%2==0)
+    current_player = "X"
+  else
+    current_player = "O"
+  end
+end
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
