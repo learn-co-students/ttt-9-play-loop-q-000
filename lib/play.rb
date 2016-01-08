@@ -29,5 +29,11 @@ def turn(board)
   end
   display_board(board)
 end
-
 # Define your play method below
+def play(board)
+turns_left=9
+until turns_left==0
+turn(board)
+turns_left -= 1
+end
+end
