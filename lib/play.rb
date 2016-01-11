@@ -19,11 +19,11 @@ def valid_move?(board, position)
   position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
 
-def turn(board)
+def turn(board, currentplayer)
   puts "Please enter 1-9:"
   input = gets.strip
   if valid_move?(board, input)
-    move(board, input)
+    move(board, input, currentplayer)
   else
     turn(board)
   end
@@ -32,9 +32,7 @@ end
 
 # Define your play method below
 def play(board)
-  counter = 1
-  while counter <= 9 do
+  while !over?(board) do
     turn(board)
-    counter+= 1
   end
 end
