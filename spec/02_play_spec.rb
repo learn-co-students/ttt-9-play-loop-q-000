@@ -5,7 +5,7 @@ describe '#play' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
     expect(self).to receive(:turn).at_least(9).times
-
+    puts "what"
     play(board)
   end
 end
