@@ -32,7 +32,10 @@ end
 
 def play(board)
   board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  while board != ["X","X","X","X","X","X","X","X","X"]
-    turn(board)
+  board.each do |positions|
+    if positions == " "
+      turn(board)
+    end
   end
 end
+
