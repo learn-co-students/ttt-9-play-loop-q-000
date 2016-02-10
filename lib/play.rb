@@ -40,3 +40,5 @@ def play(board)
     $i += 1
   end
 end
+
+
