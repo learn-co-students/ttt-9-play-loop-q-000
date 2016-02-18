@@ -31,3 +31,20 @@ def turn(board)
 end
 
 # Define your play method below
+# #play is a loop that calls #turm
+# accept an argument of a board
+# start a loop and call #turn
+# account for 9 turns max in loops
+# avoid an infinite loop
+# don't just call #turn 9 times
+def play(board)
+  turn_num = 0
+  until turn_num == 9
+    turn(board)
+  turn_num += 1
+  end
+end
+
+
+
+
