@@ -16,7 +16,23 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, position)
-  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
+        if position_taken?(board, position.to_i-1) == false && position.to_i.between?(1,9)
+            true
+        else position_taken?(board, position.to_i-1) == true && position.to_i.between?(1,9)
+            false
+        end
+    end
+
+def position_taken?(board,position)
+  if board[position] == " "
+    false
+    elsif board[position] == ""
+    false
+    elsif board[position] == nil
+    false
+    else  board[position] == "X" || "O"
+    true
+  end
 end
 
 def turn(board)
@@ -31,3 +47,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+        counter = 0
+        until counter == 9
+          turn(board)
+          counter += 1
+        end
+end
