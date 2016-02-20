@@ -33,9 +33,9 @@ end
 # Define your play method below
 
 def play(board)
-  board = 0
-   until board == 9
+  count = 0
+   until count == 9
   puts "#{turn(board)}"
-  board += 1
+  count += 1
    end
 end
