@@ -30,10 +30,13 @@ def turn(board)
   display_board(board)
 end
 
-def play(board)
-  until turn(board)==10
-  end
-end
 
+def play(board)
+ turn_count = 0
+ while turn_count < 9
+  turn(board)
+  turn_count+=1
+ end
+end
 
 # Define your play method below
