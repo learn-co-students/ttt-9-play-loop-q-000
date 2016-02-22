@@ -33,11 +33,10 @@ end
 # Define your play method below
 
 def play(board)
-  board = 0
-until board > 9
-turn(board)
-board += 1
-end
+    board = 0
+  until board > 9
+    turn(board)
+  board += 1
+  end
 end
 
-  
