@@ -33,7 +33,6 @@ end
 def play(board)
   until turn(board)==10
   end
-
 end
 
 
