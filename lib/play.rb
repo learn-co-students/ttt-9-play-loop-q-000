@@ -1,4 +1,5 @@
 # Helper Methods
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -19,6 +20,7 @@ def valid_move?(board, position)
   position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
 
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -31,3 +33,11 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  turn_counter = 0
+
+while turn_counter < 9
+   turn(board)
+   turn_counter += 1
+end
+end
