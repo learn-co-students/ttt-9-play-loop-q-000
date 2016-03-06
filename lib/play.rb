@@ -41,9 +41,11 @@ def play(board)
     turn += 1
   end  
 end
+
 #if valid_move? is true and invoked 9 times
 #or if position between 1 and 9 is truly filled
 #why wouldn't it be valid_move? = 0 instead of board??
+#@jnoconner = amazING! thank you for your helpppp!!
 
 
 
