@@ -7,8 +7,8 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, location, current_player = "X")
-  board[location.to_i-1] = current_player
+def move(board, location, value = "X")
+  board[location.to_i-1] = value
 end
 
 def position_taken?(board, location)
@@ -31,3 +31,25 @@ def turn(board)
 end
 
 # Define your play method below
+
+
+def play(board)
+  turn = 0
+  until turn == 9
+    puts turn
+    turn(board)
+    turn += 1
+  end  
+end
+
+#if valid_move? is true and invoked 9 times
+#or if position between 1 and 9 is truly filled
+#why wouldn't it be valid_move? = 0 instead of board??
+#@jnoconner = amazING! thank you for your helpppp!!
+
+
+
+
+
+
+
