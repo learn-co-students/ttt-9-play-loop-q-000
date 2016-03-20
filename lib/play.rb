@@ -24,10 +24,19 @@ def turn(board)
   input = gets.strip
   if valid_move?(board, input)
     move(board, input)
+    display_board(board)
   else
     turn(board)
   end
-  display_board(board)
 end
 
-# Define your play method below
+def play(board)
+  position = 0
+  loop do
+    position += 1
+    turn(board)
+    if position >= 9
+      break
+    end
+  end
+end
