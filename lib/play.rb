@@ -27,7 +27,16 @@ def turn(board)
   else
     turn(board)
   end
-  display_board(board)
+      display_board(board)
 end
+
+def play(board)
+  counter = 0
+  while counter < 10
+    counter += 1 
+    turn(board)
+  end
+end
+
 
 # Define your play method below
