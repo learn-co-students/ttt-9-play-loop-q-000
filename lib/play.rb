@@ -24,10 +24,17 @@ def turn(board)
   input = gets.strip
   if valid_move?(board, input)
     move(board, input)
+    display_board(board)
   else
     turn(board)
   end
-  display_board(board)
 end
 
-# Define your play method below
+def play(board)
+  moves = 0
+  until moves == 9
+    turn(board)
+    moves += 1
+  end
+end
+
