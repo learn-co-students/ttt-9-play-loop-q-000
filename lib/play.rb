@@ -25,9 +25,18 @@ def turn(board)
   if valid_move?(board, input)
     move(board, input)
   else
+    puts "Invalid move."
     turn(board)
   end
   display_board(board)
 end
 
-# Define your play method below
+def play(board)
+  num_of_turns = 0
+  while num_of_turns <=8
+    num_of_turns += 1
+    turn(board)
+  end
+  puts "Good game!"
+end
+
