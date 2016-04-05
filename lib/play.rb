@@ -35,8 +35,8 @@ end
 
 def play(board)
   playTimes = 0
-  while playTimes < 10
-    playTimes += 1
+  while playTimes < 9
     turn(board)
+    playTimes += 1
   end  
 end
