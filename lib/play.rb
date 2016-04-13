@@ -33,9 +33,7 @@ end
 # Define your play method below
 
 def play(board)
-  i = 0
-  while i < 9
+  (0...9).each do
     turn(board)
-    i += 1
   end
 end
