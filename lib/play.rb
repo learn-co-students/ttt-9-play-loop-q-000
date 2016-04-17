@@ -7,18 +7,22 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+#move
 def move(board, location, current_player = "X")
   board[location.to_i-1] = current_player
 end
 
+#position_taken?
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
 end
 
+#valid_move?
 def valid_move?(board, position)
   position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
 end
 
+#turn
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -31,3 +35,12 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  until counter == 9
+    turn(board)
+    counter += 1
+  end
+end
+
+
