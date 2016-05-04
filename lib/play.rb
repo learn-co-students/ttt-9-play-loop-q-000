@@ -42,6 +42,17 @@ def turn(board)
   return board
 end
 
+def turn_count(board)
+  position = 0
+  turns = 0
+  while position < board.size
+    if position_taken?(board, position)
+      turns += 1
+    end
+    position += 1
+  end
+  return turns
+end
 
 # Define your play method below
 def play(board)
