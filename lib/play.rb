@@ -66,7 +66,7 @@ end
 def play(board)
     # no one made any moves yet so turn is 0
     turn = 0
-    # the limit for the number of turns is 9
+    # continue to take turns until it reaches turn number 9
     while turn <= 9
         # taking turns on the board as turn increases by 1 and stops at 9
        turn(board)
