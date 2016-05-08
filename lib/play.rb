@@ -7,27 +7,49 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, location, current_player = "X")
-  board[location.to_i-1] = current_player
+#make a move
+def move(board, input, n = "X")
+    if valid_move?(board, input) && (n == "X" || n == "O")
+        board[input.to_i - 1] = n
+        return true
+    else
+        return false
+    end
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+#position_taken?
+def position_taken?(board, position)
+    if board[position] == "" || board[position] == " " || board[position] == nil
+        return false
+    else board[position] == "X" || board[position] == "O"
+        return true
+    end
 end
 
+#valid_move?
 def valid_move?(board, position)
-  position.to_i.between?(1,9) && !position_taken?(board, position.to_i-1)
+    input = position.to_i - 1
+    if !position_taken?(board, input) && input.between?(0,8)
+        return true
+    else
+        return false
+    end
 end
 
+#it's your turn: enter number from 1-9
 def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  if valid_move?(board, input)
-    move(board, input)
-  else
-    turn(board)
-  end
-  display_board(board)
+    # ask user for their move by position 1-9
+    puts "Please enter 1-9:"
+    # receiving the user input
+    # if move is valid, make the move and display the board to the user
+    input = gets.strip
+    # if the move is invalid, ask for a new move until valid move is reeived
+    if !move(board, input)
+        puts "Number is not valid"
+        puts "Please enter 1-9:"
+        input = gets.strip
+    end
+    display_board(board)
 end
 
 # Define your play method below
