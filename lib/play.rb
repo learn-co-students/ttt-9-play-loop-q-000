@@ -32,3 +32,9 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+
+  while !position_taken?(board,0) || !position_taken?(board,1) || !position_taken?(board,3) || !position_taken?(board,4) || !position_taken?(board,5) || !position_taken?(board,6) || !position_taken?(board,7) || !position_taken?(board,8)
+   turn(board) 
+  end
+end
