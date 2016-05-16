@@ -31,4 +31,15 @@ def turn(board)
   end
 end
 
+def play(board)
+  turns = 1
+  
+  until turns == 10
+    turn(board)
+    turns += 1
+    #puts "turns #{turns}"
+  end
+
+end
+
 # Define your play method below
