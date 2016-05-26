@@ -31,8 +31,14 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
-    turn(board)
+    turn(board) #recursive method
   end
 end
 
 # Define your play method below
+
+def play(board)
+  9.times do
+    turn(board)
+  end
+end
