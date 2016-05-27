@@ -1,4 +1,4 @@
-require_relative "../lib/play"
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -13,7 +13,7 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-  board[index] = current_player
+  board[index.to_i - 1] = current_player
 end
 
 def position_taken?(board, location)
@@ -25,7 +25,7 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  position = position.to_i - 1
+  position = index.to_i - 1
   if position.between?(0,8) && !position_taken?(board,position)
     true
   else
@@ -47,6 +47,9 @@ def turn(board)
 end
 
 def play(board)
-      turn(board)
+      turn_count = 0
+      while turn_count < 9 do
+        turn(board)
+        turn_count += 1
   end
 end
