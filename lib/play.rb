@@ -36,3 +36,18 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+count = 0
+while count < 10 do
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if position_taken?(board, index)
+  else
+    move(board, index)
+    display_board(board)
+  break if count >= 10
+  end
+  count += 1
+end
+end
