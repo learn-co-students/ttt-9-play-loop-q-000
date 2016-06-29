@@ -36,3 +36,26 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+
+counter = 0
+until counter == 9
+  puts "Please select your next move."
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board,index) != true
+      until valid_move?(board,index) == true
+        puts "Sorry, that's not a valid move. Please try again."
+        input = gets.strip
+        index = input_to_index(input)
+      end
+  end
+  move(board,index)
+  display_board(board)
+  counter += 1
+end
+
+ puts "Game over."
+
+
+end
