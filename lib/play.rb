@@ -23,16 +23,25 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn(board)
+def turn(board, current_player = "X")
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player)
     display_board(board)
   else
     turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  puts "Welcome to Tic Tac Toe!"
+  display_board(board)
+  loop do
+    turn(board)
+    if board.select{ |a| a == "X" || a == "O" }.length == 9
+      break;
+    end
+  end
+end
