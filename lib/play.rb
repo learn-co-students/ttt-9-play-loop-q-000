@@ -36,3 +36,8 @@ def turn(board)
 end
 
 # Define your play method below
+# accept argument (board)
+# start loop and call #turn
+def play(board)
+  # board.each do ||
+end
