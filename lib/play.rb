@@ -36,8 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
-# accept argument (board)
-# start loop and call #turn
 def play(board)
-  # board.each do ||
+  counter = 0
+  while counter < 9
+    turn(board)
+    counter+=1
+  end
 end
