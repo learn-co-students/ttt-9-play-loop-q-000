@@ -35,4 +35,10 @@ def turn(board)
   end
 end
 
+def play(board)
+  turn(board)
+  while board.include?(" ") do
+    play(board)
+  end
+end
 # Define your play method below
