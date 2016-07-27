@@ -1,4 +1,13 @@
 # Helper Methods
+
+def play(board)
+		turnNum = 1
+	while( turnNum != 10)
+		turn(board)
+		turnNum += 1
+	end	
+end
+	
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
