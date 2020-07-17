@@ -4,7 +4,7 @@ def display_board(board)
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} \n\n"
 end
 
 def input_to_index(user_input)
@@ -36,3 +36,14 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  9.times do
+    turn(board)
+  end
+
+  #turn = 0
+  #until turn == 9
+    #turn(board)
+    #turn += 1
+  #end
+end
