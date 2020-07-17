@@ -35,4 +35,16 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  play_ended = 1
+  loop do
+    play_ended += 1
+    turn(board)
+      if play_ended == 10
+        break
+      end
+  end
+end
+
+#start a loop and call #turn
+#account for 9 spots
