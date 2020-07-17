@@ -35,4 +35,29 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  turns = 0
+  until turns == 9
+    turns+=1
+    turn(board)
+  end
+end
+
+def turn_count(board)
+    counter = 0
+    board.each do |turn|
+    if turn == "X" || turn == "O"
+      counter += 1
+      puts "#{counter}" 
+    end
+end
+
+def current_player
+ if turn_count(board) % 2 == 0 #even turn put 0
+   "X"
+ end
+ if turn_count(board) % 2 == 1 #odd turn put 1
+   "O"
+ end
+end
+
