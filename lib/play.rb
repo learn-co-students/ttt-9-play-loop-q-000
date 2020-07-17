@@ -17,17 +17,20 @@ end
 
 def position_taken?(board, location)
   board[location] != " " && board[location] != ""
+  #new tip: consider the return values for logical flow.
+  #here it will return true or false deoending on the location input and the board
 end
 
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
+  # consider the new tip here as well -- logical return follows
 end
 
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  if valid_move?(board, index)
+  if valid_move?(board, index) # the tip applies in if expresions as well
     move(board, index)
     display_board(board)
   else
@@ -35,4 +38,9 @@ def turn(board)
   end
 end
 
-# Define your play method below
+# Define your play method below (continue)
+def play(board)
+  board.each_with_index do |toke, int|
+      turn(board)
+  end
+end
