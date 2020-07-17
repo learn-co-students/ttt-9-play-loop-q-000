@@ -23,6 +23,14 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
+def play(board)
+  turn = 0
+  until turn == 9
+    turn(board)
+    turn += 1
+  end
+end
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
