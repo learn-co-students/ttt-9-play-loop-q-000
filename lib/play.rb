@@ -35,4 +35,29 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  contador =1
+
+  while contador<10 do
+    turn(board)
+    contador+=1
+  end
+  
+ 
+
+end
+
+
+def turn_count(board)
+  value = board
+  x = 0
+  o= 0
+  value.each do |xis|
+    if xis == "X"
+      x += 1
+    else
+      o += 1
+    end  
+  end
+  
+end
