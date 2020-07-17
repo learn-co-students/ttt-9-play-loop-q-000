@@ -1,3 +1,10 @@
+def play(board)
+  turnnum = 0
+  until turnnum==9
+    turn(board)
+    turnnum+=1
+  end
+end
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
