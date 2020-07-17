@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)                 #evokes #play passing it 'board' as an argument
+  counter = 0
+until counter == 9              #calls turn nine times
+  turn(board)
+  counter += 1
+end
+end
