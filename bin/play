@@ -2,9 +2,18 @@
 
 require_relative "../lib/play"
 
+def play(board)
+  counter = 1
+  while counter < 10
+    turn(board)
+    counter += 1
+  end
+end
+
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
 
 # Make sure to execute #play below
+play(board)
