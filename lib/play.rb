@@ -1,3 +1,12 @@
+def play(board)
+  counter = 1
+  while counter <= 9
+    turn(board)
+    counter += 1
+  end
+end
+
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
