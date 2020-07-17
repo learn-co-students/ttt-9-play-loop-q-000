@@ -35,4 +35,12 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play
+end
+turn = 0
+turn = turn +1
+if turn >= 9
+  play = gets.strip
+end
+
+
