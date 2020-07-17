@@ -35,4 +35,14 @@ def turn(board)
   end
 end
 
+def play(board)
+  counter = 0
+  while counter < 9
+    turn(board)
+    counter += 1
+  end
+  puts "Game Over"
+end
+
+
 # Define your play method below
