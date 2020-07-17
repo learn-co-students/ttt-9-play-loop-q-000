@@ -35,4 +35,15 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def win(board)
+  false
+end
+
+def play(board)
+  #9.times do turn(board) end
+  remaining = 9
+  until remaining == 0 or win(board)
+    turn(board)
+    remaining -= 1
+  end
+end
