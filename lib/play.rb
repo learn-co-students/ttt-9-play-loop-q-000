@@ -1,3 +1,4 @@
+
 # Helper Methods
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -12,27 +13,43 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-  board[index] = current_player
+  board[index.to_i - 1] = current_player
 end
 
 def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+  if board[location] != " " && board[location] != ""
+    true
+  else
+    false
+  end
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken?(board, index)
+  position = index.to_i - 1
+  if position.between?(0,8) && !position_taken?(board,position)
+    true
+  else
+    false
+  end
 end
 
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
+  if valid_move?(board, input)
+    move(board,input)
     display_board(board)
   else
+    puts "Please try a valid input!"
+    display_board(board)
     turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+      turn_count = 0
+      while turn_count < 9 do
+        turn(board)
+        turn_count += 1
+  end
+end
