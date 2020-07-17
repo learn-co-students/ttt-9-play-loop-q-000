@@ -16,7 +16,9 @@ def move(board, index, current_player = "X")
 end
 
 def position_taken?(board, location)
+  # returns true if space is taken
   board[location] != " " && board[location] != ""
+  puts "#{board[location]} is board[location]"
 end
 
 def valid_move?(board, index)
@@ -36,3 +38,22 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  counter = 0
+  while counter < 9
+    turn(board)
+    counter += 1
+  end
+end
+
+def is_over?(board)
+  # if all positions are taken
+  if position_taken?(board, 0) && position_taken?(board, 1) && position_taken?(board, 2) && position_taken?(board, 3) && position_taken?(board, 4) && position_taken?(board, 5) && position_taken?(board, 6) && position_taken?(board, 7) && position_taken?(board, 8)
+    # the game is over
+    puts "the game is over"
+    true
+  else
+    puts "the game is not over"
+    false
+  end
+end
